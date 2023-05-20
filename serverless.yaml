@@ -1,0 +1,44 @@
+service: hello-world
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+custom:
+  serverlessChatgpt:
+    schema_version: v1
+    name_for_human: Hello Serverless Chatgpt
+    name_for_model: Hello Serverless Chatgpt
+    description_for_human: Hello Serverless Chatgpt
+    description_for_model: Hello Serverless Chatgpt
+    auth:
+      type: none
+    api:
+      type: openapi
+    contact_email: your@email.com
+    legal_info_url: http://www.example.com/legal
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          method: GET
+          path: /hello
+    serverlessChatgptFunction:
+      operationId: 'helloWorld'
+      summary: 'Returns a Hello World message.'
+      responses:
+        '200':
+          description: 'OK'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: 'The Hello World message.'
+
+plugins:
+  - serverless-chatgpt
