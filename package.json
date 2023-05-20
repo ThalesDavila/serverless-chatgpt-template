@@ -1,0 +1,11 @@
+{
+  "name": "serverless-chatgpt-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "offline": "sls offline",
+    "deploy": "sls deploy"
+  },
+  "keywords": [],
+  "license": "MIT"
+}
