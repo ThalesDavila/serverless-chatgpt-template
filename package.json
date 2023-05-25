@@ -6,6 +6,29 @@
     "offline": "sls offline",
     "deploy": "sls deploy"
   },
-  "keywords": [],
-  "license": "MIT"
+  "author": "Thales Davila",
+  "keywords": [
+    "template",
+    "chatgpt",
+    "serverless",
+    "serverless framework",
+    "serverless plugin",
+    "chatgpt plugin",
+    "openai",
+    "aws",
+    "api-gateway",
+    "s3",
+    "conversational-ai",
+    "nlp",
+    "deployment",
+    "automation",
+    "chatbot",
+    "serverless-offline"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "serverless": "^3.31.0",
+    "serverless-chatgpt": "^0.1.2",
+    "serverless-offline": "^12.0.4"
+  }
 }
