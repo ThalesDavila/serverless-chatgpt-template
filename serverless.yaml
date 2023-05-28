@@ -2,7 +2,7 @@ service: hello-world
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs18.x
 
 custom:
   serverlessChatgpt:
@@ -25,20 +25,20 @@ functions:
       - httpApi:
           method: GET
           path: /hello
-    serverlessChatgptFunction:
-      operationId: 'helloWorld'
-      summary: 'Returns a Hello World message.'
-      responses:
-        '200':
-          description: 'OK'
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    description: 'The Hello World message.'
+          serverlessChatgptApi:
+            operationId: 'helloWorld'
+            summary: 'Returns a Hello World message.'
+            responses:
+              '200':
+                description: 'OK'
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      properties:
+                        message:
+                          type: string
+                          description: 'The Hello World message.'
 
 plugins:
   - serverless-chatgpt
