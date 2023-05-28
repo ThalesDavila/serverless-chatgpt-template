@@ -6,6 +6,9 @@
     "offline": "sls offline",
     "deploy": "sls deploy"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "author": "Thales Davila",
   "keywords": [
     "template",
